@@ -14,6 +14,10 @@ class LoginPage{
     submit(){
         cy.get('[data-test="login-button"]').click();
     }
+
+    checkLockedError(){
+        cy.contains('div', 'Epic sadface: Sorry, this user has been locked out.')
+    }
 }
 
 export default new LoginPage();
